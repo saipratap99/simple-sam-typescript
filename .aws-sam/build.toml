@@ -25,4 +25,23 @@ EntryPoints = ["helloworld.ts"]
 
 
 
+
+[function_build_definitions.d0fa3aa0-c5dd-4dfc-8d64-b593b5b62d3b]
+codeuri = "/Users/saipratap/SSA/sam-app-poc/src/handlers/users"
+runtime = "nodejs16.x"
+architecture = "x86_64"
+handler = "get-users.getUsersHandler"
+manifest_hash = ""
+packagetype = "Zip"
+functions = ["GetUsersFunction"]
+
+[function_build_definitions.d0fa3aa0-c5dd-4dfc-8d64-b593b5b62d3b.metadata]
+BuildMethod = "esbuild"
+
+[function_build_definitions.d0fa3aa0-c5dd-4dfc-8d64-b593b5b62d3b.metadata.BuildProperties]
+Minify = true
+Target = "es2020"
+Sourcemap = true
+EntryPoints = ["get-users.ts"]
+
 [layer_build_definitions]

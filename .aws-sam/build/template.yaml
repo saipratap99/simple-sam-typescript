@@ -31,3 +31,26 @@ Resources:
         Sourcemap: true
         Target: es2020
       SamResourceId: HelloWorldFunction
+  GetUsersFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: GetUsersFunction
+      Handler: get-users.getUsersHandler
+      Runtime: nodejs16.x
+      Architectures:
+      - x86_64
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Path: /users
+            Method: get
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        EntryPoints:
+        - get-users.ts
+        Minify: true
+        Sourcemap: true
+        Target: es2020
+      SamResourceId: GetUsersFunction
